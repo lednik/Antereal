@@ -1,0 +1,63 @@
+@import '../../sass/params.sass';
+.card
+    margin: 0 auto
+    width: vw(1200)
+    padding: vw(24) vw(40)
+    border: 1px solid rgba($primary, 0.2)
+    background-color: $bg
+    display: flex
+    align-items: flex-start
+    background-color: #131315
+    margin-bottom: vw(120)
+    &__info
+        width: 100%
+    &__img
+        width: vw(268)
+        height: vw(336)
+        margin-right: vw(24)
+        img
+            @include contain
+    &__title
+        color: $primary
+        margin-bottom: vw(16)
+        font-size: vw(24)
+    &__text
+        color: $text
+        margin-bottom: vw(24)
+    &__buttons
+        margin-top: vw(60)
+        display: flex
+        width: 100%
+    &__btn
+        width: vw(40)
+        height: vw(40)
+        background-color: $bg
+        border: 1px solid $primary
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        &:not(:last-child)
+            margin-right: vw(16)
+        &:hover
+            border: 1px solid $text
+            svg
+                path
+                    stroke: $text
+        svg
+            width: vw(22)
+            height: vw(22)
+            path
+                transition: .2s
+                stroke: $primary
+    &__delete
+        &:hover
+            svg
+                fill: $text
+        svg
+            transition: .2s
+            fill: $primary
+        
+
+   

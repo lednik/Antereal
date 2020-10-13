@@ -1,0 +1,52 @@
+@import '../../sass/params.sass';
+.book
+    position: relative
+    width: vw(268)
+    height: vw(336)
+    background: $bg
+    border: 1px solid $primary
+    cursor: pointer
+    transition: .6s
+    &:hover
+        transform: scale(1.1)
+        z-index: 10
+    &__img
+        width: vw(268)
+        height: vw(336)
+        img
+            @include cover
+    &__info
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        min-height: 30px
+        background-color: $bg
+        border-top: 1px solid $primary
+        &-content
+            width: 100%
+            height: 100%
+            position: relative
+    &__icon
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%,-50%)
+        width: 40px
+        height: 40px
+        background-color: $bg
+        border: 1px solid $primary
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        svg
+            fill: $primary
+    &__name
+        text-align: center
+        padding: vw(44) vw(24) vw(24)
+        color: $text
+    &__author
+        text-align: center
+        color: $text
+        padding: 0 vw(24) vw(24)

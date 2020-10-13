@@ -1,0 +1,89 @@
+@import '../../sass/params.sass';
+.edit-modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background: rgba(34,34,34,.6)
+    backdrop-filter: blur(15px)
+    display: flex
+    align-items: center
+    justify-content: center
+    &__content
+        background-color: $bg
+        padding: vw(40)
+        border: 1px solid rgba($primary,.2)
+        position: relative
+    &__arrow
+        position: absolute
+        bottom: calc(100% + 24px)
+        left: calc(100% + 24px)
+        width: 16px
+        height: 16px
+        cursor: pointer
+        transition: .3s
+        z-index: 10
+        @media (max-width: 767px)
+            left: unset
+            right: 24px
+        &:hover
+            transform: rotate(90deg)
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 20px
+            height: 1px
+            background: $primary
+            transform: translate(-50%,-50%) rotate(45deg)
+        &::after
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 20px
+            height: 1px
+            background: $primary
+            transform: translate(-50%,-50%) rotate(-45deg)
+    &__title
+        font-size: vw(24)
+        margin-bottom: vw(36)
+        color: $text
+    &__buttons
+        display: flex
+        justify-content: center
+    &__btn
+        padding: 0
+        // background-color: $text
+        font-size: vw(24)
+        border-radius: 2px
+        color: white
+        cursor: pointer
+        position: relative
+        z-index: 10
+        transition: .3s
+        text-transform: uppercase
+        &:hover
+            transform: translateY(-2px)
+        &-wrapper
+            position: relative
+            &:not(:last-child)
+                margin-right: vw(24)
+            &:hover
+                .edit-modal__btn-line
+                    width: 100%
+                    left: 0
+                    right: unset
+        &-line
+            position: absolute
+            bottom: 0
+            right: 0
+            left: unset
+            display: block
+            width: 0
+            height: vw(8)
+            background-color: #A60000
+            transition: .4s
+        

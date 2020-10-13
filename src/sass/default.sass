@@ -1,0 +1,53 @@
+@import './params.sass';
+*
+    box-sizing: content-box
+html, body
+    width: 100%
+    font-size: vw(16)
+    line-height: 140%
+    min-width: 320px
+    min-height: 100vh
+body
+    margin: 0 auto
+    padding: 0
+    position: relative
+    font-weight: normal
+    overflow-y: auto
+    overflow-x: hidden
+    background: $bg
+.input
+    background: #E1E2F5
+    font-weight: normal
+    font-family: 'Museo Sans'
+    line-height: 140%
+    color: $dark
+    padding-right: vw(24)
+    transition: .3s
+    width: vw(384)
+    height: vw(54)
+    font-size: vw(18)
+    padding-left: 24px
+    border: 1px solid $primary
+    &__textarea
+        padding: vw(16) vw(24)
+        height: vw(80)
+        display: flex
+        vertical-align: top
+        font-size: vw(18)
+        line-height: 140%
+        resize: none
+    &__required
+        color: #F24949
+    &__error
+        border: 2px solid #F24949
+    &__wrapper
+        display: flex
+        flex-direction: column
+        width: fit-content
+        margin-bottom: vw(24)
+.label
+    font-weight: 500
+    font-size: vw(16)
+    line-height: vw(19)
+    margin-bottom: vw(8)
+    color: $primary

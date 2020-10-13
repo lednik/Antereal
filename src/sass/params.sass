@@ -1,0 +1,22 @@
+$primary: #937341
+$dark: #111111
+$bg: #101217
+$text: #c4b998
+
+@mixin cover
+    width: 100%
+    height: 100%
+    object-fit: cover
+@mixin contain
+    width: 100%
+    height: 100%
+    object-fit: contain
+    
+$window-width: 1920
+// Для резиновой верстки прабразует пиксели в vw,
+@function vw($pixels, $window-width: $window-width)
+    @if (unitless($pixels))
+        $pixels: $pixels * 1px
+    @if (unitless($window-width))
+        $window-width: $window-width * 1px
+    @return ($pixels* 100) / $window-width * 1vw
